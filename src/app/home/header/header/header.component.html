@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark  px-3"  style="background-color: #021F39">
+    <div class="container m-0">
+        <a class="navbar-brand fw-bold text-warning" href="#"> <img src="bitly_logo.svg" alt="Bitly Logo" width="110"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" routerLink="/">Platform</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/solutions">Solutions</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/pricing">Pricing</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                        Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/blog">LEARN MORE</a></li>
+                        <li><a class="dropdown-item" routerLink="/help">GET INSPIRED</a></li>
+                        <li><a class="dropdown-item" routerLink="/api-docs">FIND ANSWERS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="d-flex align-items-center">
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+   
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">EN</a>
+                            
+                        
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/blog">DE German</a></li>
+                            <li><a class="dropdown-item" routerLink="/help">FR French</a></li>
+                            <li><a class="dropdown-item" routerLink="/api-docs">ET Italian</a></li>
+                            <li><a class="dropdown-item" routerLink="/api-docs">ES Spanish</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <a class="nav-link text-white me-3" routerLink="/login">Log in</a>
+            <a class="btn btn-outline-light me-2 fs-5" routerLink="/quote">Get a Quote</a>
+            <a class="btn btn-light fs-5" routerLink="/signup">Sign up Free</a>
+        </div>
+    </div>
+</nav>
