@@ -47,3 +47,23 @@
     width: 280px;
     padding: 10px;
 }
+
+.card-for-customers{
+    background: #EEEAE3; 
+    border: 1px #BAB7B0; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+.attract-customer-card {
+    border: 1px solid #BAB7B0; 
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.inside-customers-card{
+    padding: 20px;
+    border: 1px #BAB7B0; 
+    
+}
