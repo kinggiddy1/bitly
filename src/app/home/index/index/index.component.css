@@ -21,6 +21,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     width: 400px;
+    font-weight: bold;
 }
 
 .inside-custom-card{
@@ -28,8 +29,8 @@
     border-top: 1px solid #BAB7B0; 
     border-radius: 20px;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    padding: 20px;
     height: 200px;
     width: 100%;
+    font-weight: 500;
 }
