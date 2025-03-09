@@ -1,1 +1,94 @@
-<p>authentication works!</p>
+<section class="vh-100">
+    @if(isLoginView){
+        <form [formGroup]="loginForm">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                  <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:rgb(252, 252, 252);">
+                    <div class="card-body p-5 text-center">
+                    
+                      <h3 class="mb-5">Sign in</h3>
+          
+                      <app-text-input
+                      [label]="'Email'"
+                      [formControl]="loginForm.controls['email']"
+                      [placeholder]="'Enter your email'"
+                      [type]="'email'"
+                      ></app-text-input>
+          
+                      <app-text-input
+                      [label]="'Password'"
+                      [formControl]="loginForm.controls['password']"
+                      [placeholder]="'Enter your password'"
+                      [type]="'password'"
+                      [autocomplete]="'current-password'"
+                      ></app-text-input>             
+          
+                      <button type="submit" (click)="loginUserForm()" class="btn btn-outline-success" [disabled]="this.loginForm.invalid" >Login</button>
+          
+                      <hr class="my-4"> 
+                      <p>You don't have an account? <a (click)="isLoginView = false" class="link-underline-hover">Register</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form> 
+    }
+    @else{
+        <form [formGroup]="registerForm" >
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                  <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                    
+                      <h3 class="mb-5">Sign Up</h3>
+          
+                      <app-text-input
+                      [label]="'Names'"
+                      [formControl]="registerForm.controls['name']"
+                      [placeholder]="'Enter your names'"
+                      [type]="'name'"
+                      ></app-text-input>
+
+                      <app-text-input
+                      [label]="'Email'"
+                      [formControl]="registerForm.controls['email']"
+                      [placeholder]="'Enter your email'"
+                      [type]="'email'"
+                      ></app-text-input>
+                      
+                      <app-text-input
+                      [label]="'Password'"
+                      [formControl]="registerForm.controls['password']"
+                      [placeholder]="'Enter your password'"
+                      [type]="'password'"
+                      [autocomplete]="'current-password'"
+                      >
+                      </app-text-input>
+
+                      <app-text-input
+                      [label]="'Password confirmation'"
+                      [formControl]="registerForm.controls['password_confirmation']"
+                      [placeholder]="'Enter your password'"
+                      [type]="'password'"
+                      >
+                      </app-text-input>
+                     
+          
+                      <button type="submit" (click)="registerUserForm()" class="btn btn-outline-success" [disabled]="this.registerForm.invalid">Register</button>
+          
+                      <hr class="my-4">
+                      <p>Arleady have an account? <a (click)="isLoginView = true" class="link-underline-hover">Login</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form>
+    }
+
+  </section>
+
+
