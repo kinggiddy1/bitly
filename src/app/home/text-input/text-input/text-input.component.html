@@ -1,0 +1,41 @@
+<div class="form-floating mb-3">
+   
+    <ng-container *ngIf="type === 'select'; else selectTemplate">
+       <select 
+        class="form-control touched" 
+        [ngClass]="control.touched ? (control.invalid ? 'is-invalid' : 'is-valid') : null"
+        [formControl]="control"
+        >
+            <option value="" disabled selected>{{ placeholder }}</option>
+            <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+        </select> 
+    </ng-container>
+ 
+    <ng-template #selectTemplate>
+       <input 
+        type="{{ type }}"
+        class="form-control touched" 
+        placeholder="{{ placeholder }}" 
+        [ngClass]="control.touched ? (control.invalid ? 'is-invalid' : 'is-valid') : null"
+        [formControl]="control"
+        [autocomplete]="autocomplete"
+        /> 
+    </ng-template>
+ 
+    <label for="{{ label }}"><strong>{{ label }}</strong></label>
+ 
+ <!-- validation messages-->
+ 
+    @if(control.errors?.['required']){
+        <div class="invalid-feedback text-start">Please provide {{ label }}</div>
+    }
+ 
+    @if(control.errors?.['email']){
+        <div class="invalid-feedback text-start">Invalid email address</div>
+    }
+    
+    @if(control.errors?.['minlength']){
+        <div class="invalid-feedback text-start">Password must be at least 8 characters long</div>
+    }
+ </div>
+ 
