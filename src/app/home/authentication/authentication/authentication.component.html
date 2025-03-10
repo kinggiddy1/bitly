@@ -1,94 +1,128 @@
-<section class="vh-100">
-    @if(isLoginView){
-        <form [formGroup]="loginForm">
-            <div class="container py-5 h-100">
-              <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                  <div class="card shadow-2-strong" style="border-radius: 1rem; background-color:rgb(252, 252, 252);">
-                    <div class="card-body p-5 text-center">
-                    
-                      <h3 class="mb-5">Sign in</h3>
-          
-                      <app-text-input
-                      [label]="'Email'"
-                      [formControl]="loginForm.controls['email']"
-                      [placeholder]="'Enter your email'"
-                      [type]="'email'"
-                      ></app-text-input>
-          
-                      <app-text-input
-                      [label]="'Password'"
-                      [formControl]="loginForm.controls['password']"
-                      [placeholder]="'Enter your password'"
-                      [type]="'password'"
-                      [autocomplete]="'current-password'"
-                      ></app-text-input>             
-          
-                      <button type="submit" (click)="loginUserForm()" class="btn btn-outline-success" [disabled]="this.loginForm.invalid" >Login</button>
-          
-                      <hr class="my-4"> 
-                      <p>You don't have an account? <a (click)="isLoginView = false" class="link-underline-hover">Register</a></p>
+  <section>
+    <div class="row">
+      <div class="col-7">
+        <section class="vh-100">
+          @if(isLoginView){
+              <form [formGroup]="loginForm">
+                  <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center">
+                      <div class="col-md-7 col-lg-7">
+                        <div class="card " >
+                          <div class="card-body p-5 text-center">
+                          
+                            <h2 class="fw-bold text-start">Log in and start sharing</h2>
+                            <p class="text-start">Don't have an account? ? <a (click)="isLoginView = false" class="link-underline-hover">Sign Up</a></p>
+                
+                            <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center mb-2 w-100 mb-3">
+                              <img src="google.png" width="20" class="me-2"> 
+                              Continue with Google
+                            </button>
+                            <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center mb-2 w-100 mb-3">
+                              <img src="apple.png" width="20" class="me-2"> 
+                              Continue with Apple
+                            </button>
+                            <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center mb-2 w-100 mb-3">
+                              
+                              Continue with Single Sign On
+                            </button>
+                  
+                            <div class="d-flex align-items-center my-3">
+                              <hr class="flex-grow-1">
+                              <span class="mx-2">OR</span>
+                              <hr class="flex-grow-1">
+                          </div>
+                            <app-text-input
+                            [label]="'Email'"
+                            [formControl]="loginForm.controls['email']"
+                            [placeholder]="'Enter your email'"
+                            [type]="'email'"
+                            ></app-text-input>
+                
+                            <app-text-input
+                            [label]="'Password'"
+                            [formControl]="loginForm.controls['password']"
+                            [placeholder]="'Enter your password'"
+                            [type]="'password'"
+                            [autocomplete]="'current-password'"
+                            ></app-text-input>     
+
+                            <div class="text-end m-3">
+                              <a class="text-end" href="#">Forgot Password?</a>
+                            </div>
+                       
+
+                            <button type="submit" (click)="loginUserForm()" class="btn btn-primary w-100" [disabled]="this.loginForm.invalid" >Login</button>
+                
+                            <hr class="my-4"> 
+                            <!-- <p>Don't have an account? ? <a (click)="isLoginView = false" class="link-underline-hover">Sign Up</a></p> -->
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-        </form> 
-    }
-    @else{
-        <form [formGroup]="registerForm" >
-            <div class="container py-5 h-100">
-              <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                  <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center">
-                    
-                      <h3 class="mb-5">Sign Up</h3>
-          
-                      <app-text-input
-                      [label]="'Names'"
-                      [formControl]="registerForm.controls['name']"
-                      [placeholder]="'Enter your names'"
-                      [type]="'name'"
-                      ></app-text-input>
-
-                      <app-text-input
-                      [label]="'Email'"
-                      [formControl]="registerForm.controls['email']"
-                      [placeholder]="'Enter your email'"
-                      [type]="'email'"
-                      ></app-text-input>
-                      
-                      <app-text-input
-                      [label]="'Password'"
-                      [formControl]="registerForm.controls['password']"
-                      [placeholder]="'Enter your password'"
-                      [type]="'password'"
-                      [autocomplete]="'current-password'"
-                      >
-                      </app-text-input>
-
-                      <app-text-input
-                      [label]="'Password confirmation'"
-                      [formControl]="registerForm.controls['password_confirmation']"
-                      [placeholder]="'Enter your password'"
-                      [type]="'password'"
-                      >
-                      </app-text-input>
-                     
-          
-                      <button type="submit" (click)="registerUserForm()" class="btn btn-outline-success" [disabled]="this.registerForm.invalid">Register</button>
-          
-                      <hr class="my-4">
-                      <p>Arleady have an account? <a (click)="isLoginView = true" class="link-underline-hover">Login</a></p>
+              </form> 
+          }
+          @else{
+              <form [formGroup]="registerForm" >
+                  <div class="container py-5 h-100">
+                    <div class="row d-flex justify-content-center align-items-center">
+                      <div class="col-12 col-md-7 col-lg-7 col-xl-7">
+                        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                          <div class="card-body p-5 text-center">
+                          
+                            <h3 class="mb-5">Sign Up</h3>
+                
+                            <app-text-input
+                            [label]="'Names'"
+                            [formControl]="registerForm.controls['name']"
+                            [placeholder]="'Enter your names'"
+                            [type]="'name'"
+                            ></app-text-input>
+      
+                            <app-text-input
+                            [label]="'Email'"
+                            [formControl]="registerForm.controls['email']"
+                            [placeholder]="'Enter your email'"
+                            [type]="'email'"
+                            ></app-text-input>
+                            
+                            <app-text-input
+                            [label]="'Password'"
+                            [formControl]="registerForm.controls['password']"
+                            [placeholder]="'Enter your password'"
+                            [type]="'password'"
+                            [autocomplete]="'current-password'"
+                            >
+                            </app-text-input>
+      
+                            <app-text-input
+                            [label]="'Password confirmation'"
+                            [formControl]="registerForm.controls['password_confirmation']"
+                            [placeholder]="'Enter your password'"
+                            [type]="'password'"
+                            >
+                            </app-text-input>
+                           
+                
+                            <button type="submit" (click)="registerUserForm()" class="btn btn-outline-success" [disabled]="this.registerForm.invalid">Register</button>
+                
+                            <hr class="my-4">
+                            <p>Arleady have an account? <a (click)="isLoginView = true" class="link-underline-hover">Login</a></p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-        </form>
-    }
+              </form>
+          }
+      
+        </section>
+      </div>
 
+      <div class="login-right col-5">
+      <img src="analytics-illustration.png" width="90%" alt="image">
+
+      <h5 class="text-center mt-2">Analyze your links and QR Codes as easily as creating them</h5>
+      </div>
+    </div>
   </section>
-
-

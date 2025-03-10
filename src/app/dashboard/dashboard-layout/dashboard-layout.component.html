@@ -1,0 +1,24 @@
+<div class="container-fluid vh-100 d-flex flex-column">
+
+    <div class="row flex-grow-1">
+      <aside class="col-12 col-md-3 col-lg-2 bg-body-tertiary p-3">
+        <app-dashboard-sidebar></app-dashboard-sidebar>
+      </aside>
+  
+      <main class="col-12 col-md-9 col-lg-10 overflow-auto">
+        <header class="row  text-light">
+          <app-dashboard-header class="col-12"></app-dashboard-header>
+        </header>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  
+    <footer class="row bg-light text-center py-2 mt-auto">
+      <app-dashboard-footer class="col-12"></app-dashboard-footer>
+    </footer>
+</div>
+
+
+  
+  
+  

@@ -12,9 +12,10 @@ import { jwtDecode } from 'jwt-decode';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = environment.apiUrl; 
-  private headers = new HttpHeaders({
-    'Content-Type': 'application/json',
+  private apiUrl = environment.apiUrl;
+
+  headers = new HttpHeaders({
+    'Content-Type': 'application/json'
   });
   
 
@@ -48,7 +49,7 @@ export class AuthService {
 
       //login
     loginUser(data: any): Observable<any> {
-      return this.http.post<any>(this.apiUrl+'login/', data, {headers: this.headers, withCredentials: true});
+      return this.http.post<any>(this.apiUrl+'auth/login', data, {headers: this.headers});
     }
     
     //protect a router
@@ -68,8 +69,8 @@ export class AuthService {
     }
 
      //get users lists
-    userLists(): Observable<any> {
-      return this.http.post<any>(this.apiUrl + 'userlist/', {});
+      getUrls(): Observable<any> {
+      return this.http.get<any>(this.apiUrl + 'urls/', {headers: this.headers});
     }
     
 }

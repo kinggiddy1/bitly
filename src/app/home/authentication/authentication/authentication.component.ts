@@ -77,7 +77,7 @@ export class AuthenticationComponent {
     if (userRole === 'Admin') {
       this.router.navigateByUrl('/dashboard');
     } else if (userRole === 'User') {
-      this.router.navigateByUrl('/user-dashboard');
+      this.router.navigateByUrl('/dashboard');
     } else {
       console.warn('Unknown role:', userRole);
     }
