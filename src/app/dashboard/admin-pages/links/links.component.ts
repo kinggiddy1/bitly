@@ -27,11 +27,18 @@ getUrls() {
         created_at: link.created_at,
         clicks: link.clicks
       }));
-      console.log("Filtered Links:", this.links);
     },
     error: error => {
       console.log("Error fetching URLs:", error);
     }
+  });
+}
+
+copyToClipboard(shortCode: string) {
+  navigator.clipboard.writeText(shortCode).then(() => {
+    alert('Short link copied');
+  }).catch(err => {
+    console.error('Failed to copy:', err);
   });
 }
 
