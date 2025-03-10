@@ -11,22 +11,25 @@
         <button class="btn btn-outline-secondary">Add filters</button>
       </div>
     </div>
-  
+    @for (link of links; track $index) {
     <div class="card mb-3" >
       <div class="card-body">
         <div class="d-flex justify-content-between">
-          <div>
-            <h5>kgjdk</h5>
-            <a  target="_blank" class="text-primary">kfkfkfkf</a>
-            <p class="text-muted">fgkfgkfkfk</p>
-            <small class="text-muted">fhsjdhfsjkdfh | 🔗 Click data</small>
-          </div>
-          <div class="d-flex">
-            <button class="btn btn-outline-secondary me-2">Copy</button>
-            <button class="btn btn-outline-secondary">Share</button>
-          </div>
+          
+            <div>
+              <h5>{{link.long_url}}</h5>
+              <a  [href]="link.long_url" target="_blank" class="text-primary">{{link.short_code}}</a>
+              <p class="text-muted"></p>
+              <small class="text-muted">Total Clicks: {{link.clicks}} | 🔗 {{link.created_at}}</small>
+            </div>
+            <div class="d-flex">
+              <button class="btn btn-outline-secondary me-2">Copy</button>
+              <button class="btn btn-outline-secondary">Share</button>
+            </div>
+        
+         
         </div>
       </div>
-    </div>
+    </div>  }
   </div>
   

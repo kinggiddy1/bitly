@@ -8,17 +8,16 @@
           </div>
           <div class="card-body">
             <div class="input-group mb-3">
-              <input 
-                type="text" 
-                class="form-control" 
-                placeholder="Enter long URL to shorten" 
-               >
-              <button 
-                class="btn btn-primary" 
-                type="button" 
-                >
-                <i class="bi bi-link-45deg"></i> Shorten
-              </button>
+              <app-text-input [label]="'long url'" 
+              [formControl]="limitForm.controls['limit_amount']"
+              [placeholder]="'Enter Amount'" 
+              [type]="'text'">
+               </app-text-input>
+              <div class="mb-3">
+                <button type="submit" (click)="newlimitForm()" class="btn btn-primary"
+                [disabled]="this.limitForm.invalid"><i class="bi bi-link-45deg"></i>Shorten</button>
+              </div>
+               
             </div>
           </div>
         </div>

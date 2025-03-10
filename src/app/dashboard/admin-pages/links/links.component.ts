@@ -13,18 +13,26 @@ export class LinksComponent implements OnInit{
   constructor(private authService : AuthService){}
 
   ngOnInit(): void {
-    this.authService.getUrls().subscribe({
-      next: (data) => {
-        // this.links = data['limitAmount']['limit_amount'];
-        console.log(data)
-      },
+   this.getUrls();
 
-      error: (error) => {
-        console.error('Error fetching links', error);
-      }
-    })
+}
 
 
+getUrls() {
+  this.authService.getUrls().subscribe({
+    next: response => {
+      this.links = response.map((link: any) => ({
+        short_code: link.short_code,
+        long_url: link.long_url,
+        created_at: link.created_at,
+        clicks: link.clicks
+      }));
+      console.log("Filtered Links:", this.links);
+    },
+    error: error => {
+      console.log("Error fetching URLs:", error);
+    }
+  });
 }
 
 }
