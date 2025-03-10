@@ -22,14 +22,17 @@
             </a>
             <p class="text-muted"></p>
             <small class="text-muted">
-              Total Clicks: {{ link.clicks }} | 🔗 {{ link.created_at }}
+              Total Clicks: {{ link.clicks }} | 🔗 {{ link.created_at | date: 'fullDate'}}
             </small>
           </div>
           <div class="d-flex">
-            <button class="btn btn-outline-secondary me-2" (click)="copyToClipboard(link.short_code)">
+            <button class="btn btn-outline-primary me-2" (click)="copyToClipboard('http://localhost:3000/' + link.short_code)">
               Copy
             </button>
-            <button class="btn btn-outline-secondary">Share</button>
+            
+            <button class="btn btn-outline-primary me-2" (click)="copyToClipboard('http://localhost:3000/' + link.short_code)">
+              Share
+            </button>
           </div>
         </div>
       </div>

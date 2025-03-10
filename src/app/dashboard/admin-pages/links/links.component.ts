@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../shared/services/auth.service';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-links',
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule],
   templateUrl: './links.component.html',
   styleUrl: './links.component.css'
 })
