@@ -6,6 +6,7 @@ import { DashboardLayoutComponent } from './dashboard/dashboard-layout/dashboard
 import { AdminHomeComponent } from './dashboard/admin-pages/admin-home/admin-home.component';
 import { LinksComponent } from './dashboard/admin-pages/links/links.component';
 import { CreareLinkComponent } from './dashboard/admin-pages/creare-link/creare-link.component';
+import { authGuard } from './shared/guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -31,14 +32,17 @@ export const routes: Routes = [
           {
             path: 'dashboard',
             component: AdminHomeComponent,
+            canActivate: [authGuard],
           }, 
           {
             path: 'urls',
             component: LinksComponent,
+            canActivate: [authGuard],
           },
           {
             path: 'createUrl',
             component: CreareLinkComponent,
+            canActivate: [authGuard],
           },         
         ],
       },
