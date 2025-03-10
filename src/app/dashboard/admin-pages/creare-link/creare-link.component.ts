@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
 import { TextInputComponent } from '../../../home/text-input/text-input/text-input.component';
-import { ReactiveFormsModule, FormBuilder, Validators} from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../shared/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-admin-home',
+  selector: 'app-creare-link',
   imports: [TextInputComponent, ReactiveFormsModule],
-  templateUrl: './admin-home.component.html',
-  styleUrl: './admin-home.component.css'
+  templateUrl: './creare-link.component.html',
+  styleUrl: './creare-link.component.css'
 })
-export class AdminHomeComponent {
-
-  constructor(private authService: AuthService, private router: Router) {}
+export class CreareLinkComponent {
+ constructor(private authService: AuthService, private router: Router) {}
 
   private fb = new FormBuilder();
 

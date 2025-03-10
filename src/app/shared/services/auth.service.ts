@@ -62,11 +62,6 @@ export class AuthService {
     return token ? jwtDecode(token) : null;
   }
   
-  //get total users
-  getTotalUsers(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}totalusers/`);
-  }
-  
   //get users lists
   getUrls(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}urls/`, 

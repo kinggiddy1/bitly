@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Create Short URL</h4>
+          </div>
+          <div class="card-body">
+            <div class="input-group mb-3">
+              <app-text-input [label]="'long URL'" 
+              [formControl]="limitForm.controls['long_url']"
+              [placeholder]="'Enter Amount'" 
+              [type]="'text'">
+               </app-text-input>
+              <div class="mb-3">
+                <button type="submit" (click)="newlimitForm()" class="btn btn-primary"
+                [disabled]="this.limitForm.invalid"><i class="bi bi-link-45deg"></i>Shorten</button>
+              </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  

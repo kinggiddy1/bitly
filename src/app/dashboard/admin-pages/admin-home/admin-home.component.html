@@ -1,28 +1,60 @@
-<!-- dashboard.component.html -->
 <div class="container mt-4">
+  <div class="container mt-4">
+    <h2 class="mb-3">Your Connections Platform</h2>
     <div class="row">
-      <div class="col-12">
-        <div class="card shadow-sm">
-          <div class="card-header bg-primary text-white">
-            <h4 class="mb-0">Create Short URL</h4>
-          </div>
-          <div class="card-body">
-            <div class="input-group mb-3">
-              <app-text-input [label]="'long url'" 
-              [formControl]="limitForm.controls['limit_amount']"
-              [placeholder]="'Enter Amount'" 
-              [type]="'text'">
-               </app-text-input>
-              <div class="mb-3">
-                <button type="submit" (click)="newlimitForm()" class="btn btn-primary"
-                [disabled]="this.limitForm.invalid"><i class="bi bi-link-45deg"></i>Shorten</button>
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="row g-0 align-items-center">
+            <div class="col-6">
+              <img src="dashboard_links.png" class="img-fluid p-3" alt="Make it short">
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center text-center">
+              <div class="card-body">
+                <h5 class="card-title">Make it short</h5>
+                <a href="#" class="btn btn-primary">Go to Links</a>
               </div>
-               
             </div>
           </div>
         </div>
       </div>
-    </div>
   
-    
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="row g-0 align-items-center">
+            <div class="col-6">
+              <img src="dashboard_qrcs.png" class="img-fluid p-3" alt="Make it scannable">
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center text-center">
+              <div class="card-body">
+                <h5 class="card-title">Make it scannable</h5>
+                <a href="#" class="btn btn-primary">Go to Codes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="row g-0 align-items-center">
+            <div class="col-6">
+              <img src="dashboard_lib.png" class="img-fluid p-3" alt="Make a page">
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-center text-center">
+              <div class="card-body">
+                <h5 class="card-title">Make a page</h5>
+                <a href="#" class="btn btn-primary">Go to Pages</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
   </div>
+  
+</div>
+

@@ -5,6 +5,7 @@ import { AuthenticationComponent } from './home/authentication/authentication/au
 import { DashboardLayoutComponent } from './dashboard/dashboard-layout/dashboard-layout.component';
 import { AdminHomeComponent } from './dashboard/admin-pages/admin-home/admin-home.component';
 import { LinksComponent } from './dashboard/admin-pages/links/links.component';
+import { CreareLinkComponent } from './dashboard/admin-pages/creare-link/creare-link.component';
 
 export const routes: Routes = [
     {
@@ -34,7 +35,11 @@ export const routes: Routes = [
           {
             path: 'urls',
             component: LinksComponent,
-          },        
+          },
+          {
+            path: 'createUrl',
+            component: CreareLinkComponent,
+          },         
         ],
       },
 ];
