@@ -2,15 +2,27 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
 
+## firsly clone this project from Github
+
+====================================
+
 ## Development server
 
 To start a local development server, run:
+
+```bash
+ng npm install  in order to install all necessary packages
+```
 
 ```bash
 ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Navigate to create account to be able to use the sysem
+
+http://localhost:4200/auth
 
 ## Code scaffolding
 

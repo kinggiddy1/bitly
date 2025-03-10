@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router'; //to use routerLink Active
 
   export class DashboardSidebarComponent implements OnInit{
 
-    fullnames: string | null = null;
+    username: string | null = null;
     role: 'Admin' | 'User' | null = 'Admin';
     navItems: Array<{ label: string; link: string; icon: string }> = [];
   
@@ -26,7 +26,7 @@ import { RouterModule } from '@angular/router'; //to use routerLink Active
   
       const decodedToken = this.authService.decodeToken();
       if (decodedToken) {
-        this.fullnames = decodedToken.name;
+        this.username = decodedToken.id;
         this.role = decodedToken.role as 'Admin' | 'User';
         this.navItems = NAV_ITEMS[this.role || 'User'];
       }else { 
