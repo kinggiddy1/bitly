@@ -32,7 +32,7 @@ This application is a full-stack URL shortener with features similar to Bit.ly. 
 
 #### Backend Setup
 
-```bash
+````bash
 # Clone the repository
 git https://github.com/kinggiddy1/bitly.git
 cd bitly
@@ -43,7 +43,7 @@ npm install    (nstall  in order to install all necessary packages)
 
 ```bash
 ng serve
-```
+````
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
@@ -54,12 +54,11 @@ http://localhost:4200/auth
 # CREDENTIALS
 
 email: egide@gmail.com
-password: 123
+password: 123 or create an account
 
 ## Code scaffolding
 
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
 
 ## Building
 
@@ -70,4 +69,3 @@ ng build
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
