@@ -51,10 +51,19 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 http://localhost:4200/auth
 
-# CREDENTIALS
+## Authentication Details
 
 email: egide@gmail.com
-password: 123 or create an account
+password: 123
+
+or create an account
+
+### JWT Implementation
+
+The application uses a secure JWT-based authentication system:
+
+- **Access Tokens**: Short-lived JWTs (1 hour) for API authorization
+- **Token Storage**: Access tokens stored in local storage
 
 ## Code scaffolding
 
