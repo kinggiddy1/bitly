@@ -73,8 +73,8 @@
                             <h3 class="mb-5">Sign Up</h3>
                 
                             <app-text-input
-                            [label]="'Names'"
-                            [formControl]="registerForm.controls['name']"
+                            [label]="'User Name'"
+                            [formControl]="registerForm.controls['username']"
                             [placeholder]="'Enter your names'"
                             [type]="'name'"
                             ></app-text-input>
@@ -94,16 +94,7 @@
                             [autocomplete]="'current-password'"
                             >
                             </app-text-input>
-      
-                            <app-text-input
-                            [label]="'Password confirmation'"
-                            [formControl]="registerForm.controls['password_confirmation']"
-                            [placeholder]="'Enter your password'"
-                            [type]="'password'"
-                            >
-                            </app-text-input>
-                           
-                
+
                             <button type="submit" (click)="registerUserForm()" class="btn btn-outline-success" [disabled]="this.registerForm.invalid">Register</button>
                 
                             <hr class="my-4">

@@ -24,10 +24,9 @@ export class AuthenticationComponent {
   private fb = new FormBuilder();
 
   registerForm = this.fb.group({
-    name: ['', [Validators.required]],
+    username: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
     password: ['',[Validators.minLength(3), Validators.required]],
-    password_confirmation: ['', [Validators.minLength(3), Validators.required]],
   });
 
   registerUserForm() {

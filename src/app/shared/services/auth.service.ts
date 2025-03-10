@@ -36,15 +36,9 @@ export class AuthService {
       localStorage.removeItem(TOKEN_KEY);
       this.router.navigateByUrl('/auth');
     }
-
-    //get data
-    getData(): Observable<any> {
-      return this.http.get<any>(this.apiUrl);
-    }
-  
     // register
     registerUser(data: any): Observable<any> { 
-      return this.http.post<any>(this.apiUrl+'register/', data);
+      return this.http.post<any>(this.apiUrl+'auth/register/', data,{headers: this.headers});
     } 
 
       //login
