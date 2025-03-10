@@ -33,8 +33,4 @@ import { RouterModule } from '@angular/router'; //to use routerLink Active
         console.error('Failed to decode token'); 
       }
     }
-  
-    onLogout(){
-      this.authService.clearToken();
-    }
 }

@@ -6,7 +6,7 @@ import { AuthService } from '../../../shared/services/auth.service';
 
 @Component({
   selector: 'app-admin-home',
-  imports: [TextInputComponent, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './admin-home.component.html',
   styleUrl: './admin-home.component.css'
 })

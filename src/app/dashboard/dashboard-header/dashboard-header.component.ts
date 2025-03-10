@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-dashboard-header',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard-header.component.css'
 })
 export class DashboardHeaderComponent {
-
+  constructor(private authService : AuthService ){}
+  onLogout(){
+    this.authService.clearToken();
+  }
 }
