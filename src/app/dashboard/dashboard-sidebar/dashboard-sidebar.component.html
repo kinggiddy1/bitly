@@ -1,4 +1,5 @@
-<nav id="sidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-white shadow-sm position-fixed vh-100" style="width: 250px;">
+<!-- Desktop Sidebar (hidden on mobile) -->
+<nav id="sidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-white shadow-sm position-fixed d-none d-md-flex vh-100" style="width: 250px;">
   <a [routerLink]="role === 'Admin' ? '/dashboard' : '/user-dashboard'" 
   class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
     <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
@@ -19,3 +20,29 @@
   </ul>
   <hr>
 </nav>
+
+<!-- Mobile Sidebar (Offcanvas) -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileSidebarLabel">
+      <img src="bitly_logo.svg" width="80px" alt="logo">
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item" *ngFor="let item of navItems">
+        <a 
+          [routerLink]="item.link"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link link-body-emphasis"
+          data-bs-dismiss="offcanvas">
+          <i class="bi" [ngClass]="'bi-' + item.icon"></i> 
+          {{ item.label }}
+        </a>
+      </li>    
+    </ul>
+    <hr>
+  </div>
+</div>

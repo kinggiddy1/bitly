@@ -17,7 +17,7 @@
         <div class="d-flex justify-content-between">
           <div>
             <h5>{{ link.long_url }}</h5>
-            <a [href]="'http://localhost:3000/' + link.short_code" target="_blank" class="text-primary">
+            <a [href]="'https://node-api.thefocalmedia.com/' + link.short_code" target="_blank" class="text-primary">
               {{ link.short_code }}
             </a>
             <p class="text-muted"></p>
@@ -26,11 +26,11 @@
             </small>
           </div>
           <div class="d-flex">
-            <button class="btn btn-outline-primary me-2" (click)="copyToClipboard('http://localhost:3000/' + link.short_code)">
+            <button class="btn btn-outline-primary me-2" (click)="copyToClipboard('https://node-api.thefocalmedia.com/' + link.short_code)">
               Copy
             </button>
             
-            <button class="btn btn-outline-primary me-2" (click)="copyToClipboard('http://localhost:3000/' + link.short_code)">
+            <button class="btn btn-outline-primary me-2" (click)="copyToClipboard('https://node-api.thefocalmedia.com/' + link.short_code)">
               Share
             </button>
           </div>
