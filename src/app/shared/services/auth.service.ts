@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from '../environments/environments';
+import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 import { TOKEN_KEY } from '../contants/constants';
 import { Router } from '@angular/router';
