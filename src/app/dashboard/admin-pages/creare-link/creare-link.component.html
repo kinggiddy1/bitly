@@ -9,7 +9,7 @@
           <form (ngSubmit)="newlimitForm()">
             <div class="mb-4">
               <app-text-input
-                [label]="'Enter your long URL'"
+                [label]="'long URL'"
                 [formControl]="limitForm.controls['long_url']"
                 [placeholder]="'https://example.com/your-very-long-url-that-needs-shortening'"
                 [type]="'url'">
