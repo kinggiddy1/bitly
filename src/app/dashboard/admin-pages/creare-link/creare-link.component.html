@@ -1,25 +1,31 @@
 <div class="container mt-4">
-    <div class="row">
-      <div class="col-12">
-        <div class="card shadow-sm">
-          <div class="card-header bg-primary text-white">
-            <h4 class="mb-0">Create Short URL</h4>
-          </div>
-          <div class="card-body">
-            <div class="input-group mb-3">
-              <app-text-input [label]="'long URL'" 
-              [formControl]="limitForm.controls['long_url']"
-              [placeholder]="'Enter Amount'" 
-              [type]="'text'">
-               </app-text-input>
-              <div class="mb-3">
-                <button type="submit" (click)="newlimitForm()" class="btn btn-primary"
-                [disabled]="this.limitForm.invalid"><i class="bi bi-link-45deg"></i>Shorten</button>
-              </div>
-               
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white py-3">
+          <h4 class="mb-0"><i class="bi bi-link-45deg me-2"></i>Create Short URL</h4>
+        </div>
+        <div class="card-body p-4">
+          <form (ngSubmit)="newlimitForm()">
+            <div class="mb-4">
+              <app-text-input
+                [label]="'Enter your long URL'"
+                [formControl]="limitForm.controls['long_url']"
+                [placeholder]="'https://example.com/your-very-long-url-that-needs-shortening'"
+                [type]="'url'">
+              </app-text-input>
             </div>
-          </div>
+            <div class="d-grid">
+              <button 
+                type="submit" 
+                class="btn btn-primary py-2 w-40"
+                [disabled]="this.limitForm.invalid">
+                <i class="bi bi-link-45deg me-2"></i>Shorten
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  
+  </div>
+</div>
