@@ -59,6 +59,7 @@ export class AuthenticationComponent {
           localStorage.setItem('token', response.token);
         
           this.navigateBasedOnRole(response.token);
+          
         } 
         else {
           console.warn('Token is missing in response');

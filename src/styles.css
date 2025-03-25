@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+/* Add this to your global styles.css or a separate toast-styles.css */
+.custom-toast {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 12px 15px;
+    width: 300px;
+    color: aliceblue;
+    word-wrap: break-word;
+    opacity: 0.95;
+    background-size: 40px 40px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    padding-left: 65px;
+    position: relative;
+  }
+
+.custom-toast-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.custom-toast-message {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
