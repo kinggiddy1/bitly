@@ -18,7 +18,7 @@
           <!-- Link information -->
           <div class="col-12 col-md-8 mb-3 mb-md-0">
             <h5 class="text-truncate">{{ link.long_url }}</h5>
-            <a [href]="'https://node-api.thefocalmedia.com/' + link.short_code" 
+            <a [href]="'http://localhost:3000/' + link.short_code" 
                target="_blank" 
                class="text-primary d-block text-break">
               {{ link.short_code }}
@@ -32,12 +32,12 @@
           <div class="col-12 col-md-2 d-flex flex-column justify-content-center">
             <div class="d-grid gap-2">
               <button class="btn btn-outline-primary" 
-                      (click)="copyToClipboard('https://node-api.thefocalmedia.com/' + link.short_code)">
+                      (click)="copyToClipboard('http://localhost:3000/' + link.short_code)">
                 <i class="bi bi-clipboard"></i> Copy
               </button>
-              
+             <!-- https://node-api.thefocalmedia.com/-->
               <button class="btn btn-outline-primary" 
-                      (click)="copyToClipboard('https://node-api.thefocalmedia.com/' + link.short_code)">
+                      (click)="copyToClipboard('http://localhost:3000/' + link.short_code)">
                 <i class="bi bi-share"></i> Share
               </button>
             </div>

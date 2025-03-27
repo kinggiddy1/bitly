@@ -70,7 +70,7 @@ export class AuthService {
   
   // post url
   postUrls(data: any): Observable<any> { 
-    return this.http.post<any>(`${this.apiUrl}urls/`, data,
+    return this.http.post<any>(`${this.apiUrl}/shorten`, data,
       { headers: this.getHeaders() });
   } 
 }
